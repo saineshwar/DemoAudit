@@ -1,0 +1,19 @@
+﻿@model LoginViewModel
+
+    <div class="row">
+        <div class="col-md-6">
+            <form id="account" asp-controller="Portal" asp-antiforgery="true" asp-action="Login" method="post">
+
+                <span asp-validation-for="Username" class="text-danger"></span>
+                <div class="input-group mb-3">
+                    <input asp-for="Username" class="form-control" placeholder="UserName" />
+                </div>
+                <span asp-validation-for="Password" class="text-danger"></span>
+                <div class="input-group mb-3">
+                    <input type="password" asp-for="Password" autocomplete="new-password" class="form-control" placeholder="Password" />
+                </div>
+                <button type="submit" id="btnsubmit" class="btn btn-primary btn-block">Sign In</button>
+
+            </form>
+        </div>
+    </div>
